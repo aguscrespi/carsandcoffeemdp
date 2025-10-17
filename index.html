@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars & Coffee Mar del Plata</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+    <!-- Font Awesome para iconos de contacto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#inicio" class="logo">
+                <img src="logo.png" alt="Logo de Cars & Coffee Mar del Plata">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#sobre-nosotros">Nosotros</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="registro.html">Inscripción</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('imagenes/00-FRONT/front (1).jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('imagenes/00-FRONT/front (2).jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('imagenes/00-FRONT/front (3).jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('imagenes/00-FRONT/front (4).jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('imagenes/00-FRONT/front (5).jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('imagenes/00-FRONT/front (6).jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('imagenes/00-FRONT/front (7).jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('imagenes/00-FRONT/front (8).jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('imagenes/00-FRONT/front (9).jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('imagenes/00-FRONT/front (10).jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('imagenes/00-FRONT/front (11).jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('imagenes/00-FRONT/front (12).jpg');"></div>
+                </div>
+                <div class="static-slide-content">
+                    <div class="hero-phrases">
+                        <h2>Café en Mano</h2>
+                        <h2>Autos Exclusivos</h2>
+                        <h2>Buenos Momentos</h2>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section id="sobre-nosotros">
+            <div class="container">
+                <h2>Nuestra Esencia</h2>
+                <p>
+                    Somos el punto de encuentro de la cultura <b>"fierrera"</b>, un lugar con buena energía, donde la prioridad es la <b>camaradería</b>. Creamos un espacio para disfrutar de un buen <b>café</b>, charlar entre amigos y apreciar los detalles que hacen único a cada auto. Si tenés un clásico con historia, un hot rod prolijo, un americano con presencia o un deportivo de alta gama, este es tu lugar.
+                </p>
+                <p>
+                    Nuestros eventos van mucho más allá de una exhibición. Organizamos experiencias memorables, como <b>ruteadas</b> emocionantes a otras localidades y encuentros vibrantes que suman <b>food trucks</b> y <b>música en vivo</b>. Creemos en la <b>buena compañía</b> y en compartir juntos la pasión por los autos.
+                </p>
+            </div>
+        </section>
+
+        <section id="eventos-anteriores-resumen">
+            <div class="container">
+                <h2>Eventos Anteriores</h2>
+                <p>Un pequeño vistazo a nuestros encuentros pasados. Haz clic para ver la galería completa.</p>
+                
+                <div class="galeria-tabs">
+                    <button class="tab-btn active" data-target="#evento-marysol1-resumen">Mar y Sol I</button>
+                    <button class="tab-btn" data-target="#evento-marysol2-resumen">Mar y Sol II</button>
+                    <button class="tab-btn" data-target="#evento-balcarce1-resumen">Balcarce I</button>
+                    <button class="tab-btn" data-target="#evento-chapadmalal1-resumen">Chapadmalal I</button>
+                </div>
+
+                <div id="evento-marysol1-resumen" class="galeria-content active">
+                    <div class="galeria-grid" data-folder="imagenes/01-Mar y Sol I" data-count="5" data-total="11" data-lightbox="marysol1-resumen" data-title="Mar y Sol I"></div>
+                </div>
+
+                <div id="evento-marysol2-resumen" class="galeria-content">
+                    <div class="galeria-grid" data-folder="imagenes/02-Mar y Sol II" data-count="5" data-total="121" data-lightbox="marysol2-resumen" data-title="Mar y Sol II"></div>
+                </div>
+                
+                <div id="evento-balcarce1-resumen" class="galeria-content">
+                     <div class="galeria-grid" data-folder="imagenes/03-Balcarce I" data-count="5" data-total="407" data-lightbox="balcarce1-resumen" data-title="Balcarce I"></div>
+                </div>
+
+                <div id="evento-chapadmalal1-resumen" class="galeria-content">
+                     <div class="galeria-grid" data-folder="imagenes/04-Chapadmalal I" data-count="5" data-total="429" data-lightbox="chapadmalal1-resumen" data-title="Chapadmalal I"></div>
+                </div>
+
+                <div class="text-center">
+                    <a href="galeria.html" class="btn">Ver Galería Completa</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO ACTUALIZADA -->
+        <section id="contacto" class="contacto-section">
+            <div class="container">
+                <h2>Contacto y Redes</h2>
+                <p>Escribinos o seguinos para estar al tanto de los próximos encuentros y novedades.</p>
+                <div class="contact-grid">
+                    <a href="https://wa.me/5492236681448?text=Hola!%20Quisiera%20saber%20m%C3%A1s%20sobre%20Cars%20%26%20Coffee." target="_blank" class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="contact-info">
+                            <h3>WhatsApp</h3>
+                            <p>+54 9 223 6681448</p>
+                        </div>
+                    </a>
+                    <a href="mailto:carsandcoffeemdp@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-info">
+                            <h3>Email</h3>
+                            <p>carsandcoffeemdp@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/carsandcoffeemdp" target="_blank" class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <div class="contact-info">
+                            <h3>Instagram</h3>
+                            <p>@carsandcoffeemdp</p>
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/carsandcoffeemdp" target="_blank" class="contact-item">
+                        <i class="fab fa-facebook-f"></i>
+                        <div class="contact-info">
+                            <h3>Facebook</h3>
+                            <p>Cars & Coffee Mar del Plata</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Cars & Coffee Mar del Plata. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
