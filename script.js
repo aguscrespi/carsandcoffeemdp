@@ -81,5 +81,15 @@ document.addEventListener('DOMContentLoaded', function () {
         'wrapAround': true
     });
 
+    // 4. LÓGICA PARA EL MENÚ HAMBURGUESA
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+        });
+    }
+
 });
 
