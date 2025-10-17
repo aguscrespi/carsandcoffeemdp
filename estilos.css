@@ -1,0 +1,150 @@
+/* --- VARIABLES DE COLOR Y ESTILOS GLOBALES --- */
+:root {
+    --color-fondo: #121212;
+    --color-superficie: #1E1E1E;
+    --color-primario: #FCA311;
+    --color-texto-principal: #E0E0E0;
+    --color-texto-secundario: #A0A0A0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Montserrat', sans-serif; background-color: var(--color-fondo); color: var(--color-texto-principal); line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+h2 { font-size: 2.5rem; text-align: center; margin-bottom: 20px; color: var(--color-primario); }
+p { text-align: center; max-width: 700px; margin: 0 auto 20px auto; color: var(--color-texto-secundario); }
+section { padding: 80px 0; }
+
+/* --- HEADER Y NAVEGACIÓN --- */
+header { background-color: rgba(18, 18, 18, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-superficie); padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 100; }
+header .container { display: flex; justify-content: space-between; align-items: center; }
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+nav ul { list-style: none; display: flex; gap: 25px; }
+nav a { text-decoration: none; color: var(--color-texto-principal); font-weight: 400; transition: color 0.3s ease; }
+nav a:hover { color: var(--color-primario); }
+nav a.active { color: var(--color-primario); border-bottom: 2px solid var(--color-primario); padding-bottom: 3px; }
+
+/* --- SECCIÓN HERO SLIDER --- */
+.hero-slider { height: 100vh; padding: 0; position: relative; }
+.swiper-container { width: 100%; height: 100%; }
+.swiper-slide { text-align: center; font-size: 18px; background: #fff; display: flex; justify-content: center; align-items: center; background-size: cover; background-position: center; position: relative; }
+.swiper-slide::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(18, 18, 18, 0.6); }
+
+.static-slide-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; width: 100%; text-align: center; pointer-events: none; }
+.hero-phrases { display: flex; flex-direction: column; gap: 0.2em; }
+.hero-phrases h2 { font-size: 3rem; font-weight: 500; color: #FFF; text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8); margin: 0; line-height: 1.2; }
+.swiper-pagination-bullet-active { background-color: var(--color-primario) !important; }
+
+/* --- SECCIONES GENERALES --- */
+.btn { display: inline-block; background-color: var(--color-primario); color: var(--color-fondo); padding: 12px 30px; text-decoration: none; font-weight: 700; border-radius: 5px; transition: background-color 0.3s ease, transform 0.2s ease; border: none; cursor: pointer; font-size: 1rem; }
+.btn:hover { background-color: #ffb703; transform: translateY(-2px); }
+.text-center { text-align: center; }
+
+/* --- SECCIÓN GALERÍA MASONRY --- */
+#eventos-anteriores-resumen { padding-bottom: 40px; }
+.galeria-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
+.tab-btn { padding: 10px 20px; background-color: var(--color-superficie); color: var(--color-texto-principal); border: 1px solid #333; border-radius: 5px; cursor: pointer; font-family: 'Montserrat', sans-serif; font-size: 1rem; transition: all 0.3s ease; }
+.tab-btn:hover { background-color: #333; border-color: var(--color-primario); }
+.tab-btn.active { background-color: var(--color-primario); color: var(--color-fondo); border-color: var(--color-primario); }
+.galeria-content { display: none; }
+.galeria-content.active { display: block; }
+.galeria-grid { margin: 0 auto; }
+.grid-item { width: calc(33.333% - 12px); margin-bottom: 15px; border-radius: 5px; overflow: hidden; }
+.grid-item img { width: 100%; height: auto; display: block; transition: transform 0.3s ease, filter 0.3s ease; cursor: pointer; }
+.grid-item img:hover { transform: scale(1.05); filter: brightness(1.1); }
+@media (max-width: 900px) { .grid-item { width: calc(50% - 10px); } }
+@media (max-width: 600px) { .grid-item { width: 100%; } }
+.lb-data .lb-caption { color: var(--color-texto-principal); }
+.lb-data .lb-number { color: var(--color-texto-secundario); }
+#galeria-completa h3 { font-size: 2rem; color: var(--color-texto-principal); text-align: center; margin-top: 40px; margin-bottom: 20px; border-bottom: 1px solid var(--color-superficie); padding-bottom: 10px; }
+
+/* --- SECCIÓN FORMULARIO --- */
+#proximo-evento { background-color: var(--color-superficie); }
+.formulario-registro { max-width: 600px; margin: 40px auto 0 auto; display: flex; flex-direction: column; gap: 20px; }
+.formulario-registro h3 {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-texto-principal);
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+.campo-form { display: flex; flex-direction: column; }
+.campo-form label { margin-bottom: 5px; color: var(--color-texto-secundario); }
+.campo-form input { padding: 12px; background-color: var(--color-fondo); border: 1px solid #333; border-radius: 5px; color: var(--color-texto-principal); font-size: 1rem; }
+.campo-form input:focus { outline: none; border-color: var(--color-primario); }
+
+/* Estilos para el input de archivo personalizado */
+.input-file { display: none; }
+.btn-file { display: inline-block; padding: 10px 20px; background-color: var(--color-superficie); border: 1px solid #333; border-radius: 5px; cursor: pointer; transition: all 0.3s ease; text-align: center; }
+.btn-file:hover { border-color: var(--color-primario); color: var(--color-texto-principal); }
+.file-name { margin-top: 10px; font-size: 0.9rem; color: var(--color-texto-secundario); display: block; }
+
+/* --- NUEVOS ESTILOS SECCIÓN CONTACTO --- */
+.contacto-section {
+    background-color: var(--color-superficie);
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 800px;
+    margin: 40px auto 0 auto;
+}
+.contact-item {
+    background-color: var(--color-fondo);
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: var(--color-primario);
+}
+.contact-item i {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    flex-shrink: 0;
+}
+.contact-info {
+    text-align: left;
+}
+.contact-info h3 {
+    margin: 0 0 5px 0;
+    color: var(--color-texto-principal);
+    font-size: 1.2rem;
+}
+.contact-info p {
+    margin: 0;
+    text-align: left;
+    color: var(--color-texto-secundario);
+    word-break: break-word;
+}
+.contact-item:hover .contact-info p {
+    color: var(--color-texto-principal);
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* --- FOOTER --- */
+footer { background-color: var(--color-fondo); text-align: center; padding: 20px 0; border-top: 1px solid #2a2a2a; color: var(--color-texto-secundario); }
+

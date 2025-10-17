@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Eventos - Cars & Coffee Mar del Plata</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+    <!-- Font Awesome para iconos de contacto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Logo de Cars & Coffee Mar del Plata">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#sobre-nosotros">Nosotros</a></li>
+                    <li><a href="galeria.html" class="active">Galería</a></li>
+                    <li><a href="registro.html">Inscripción</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="galeria-completa">
+            <div class="container">
+                <h2>Nuestra Galería Completa</h2>
+                <p>Explora todos los momentos y vehículos que han pasado por nuestros eventos.</p>
+                
+                <div class="galeria-tabs">
+                    <button class="tab-btn active" data-target="#evento-marysol1-full">Mar y Sol I</button>
+                    <button class="tab-btn" data-target="#evento-marysol2-full">Mar y Sol II</button>
+                    <button class="tab-btn" data-target="#evento-balcarce1-full">Balcarce I</button>
+                    <button class="tab-btn" data-target="#evento-chapadmalal1-full">Chapadmalal I</button>
+                </div>
+
+                <div id="evento-marysol1-full" class="galeria-content active">
+                    <h3>Mar y Sol I</h3>
+                    <div class="galeria-grid" data-folder="imagenes/01-Mar y Sol I" data-count="11" data-lightbox="marysol1-full" data-title="Mar y Sol I"></div>
+                </div>
+
+                <div id="evento-marysol2-full" class="galeria-content">
+                    <h3>Mar y Sol II</h3>
+                    <div class="galeria-grid" data-folder="imagenes/02-Mar y Sol II" data-count="121" data-lightbox="marysol2-full" data-title="Mar y Sol II"></div>
+                </div>
+                
+                <div id="evento-balcarce1-full" class="galeria-content">
+                    <h3>Balcarce I</h3>
+                     <div class="galeria-grid" data-folder="imagenes/03-Balcarce I" data-count="407" data-lightbox="balcarce1-full" data-title="Balcarce I"></div>
+                </div>
+
+                <div id="evento-chapadmalal1-full" class="galeria-content">
+                    <h3>Chapadmalal I</h3>
+                     <div class="galeria-grid" data-folder="imagenes/04-Chapadmalal I" data-count="429" data-lightbox="chapadmalal1-full" data-title="Chapadmalal I"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Cars & Coffee Mar del Plata. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

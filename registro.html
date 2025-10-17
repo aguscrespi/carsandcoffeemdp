@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción - Cars & Coffee Mar del Plata</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos de contacto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Logo de Cars & Coffee Mar del Plata">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#sobre-nosotros">Nosotros</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="registro.html" class="active">Inscripción</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="proximo-evento">
+            <div class="container">
+                <h2>Inscribí tu Vehículo</h2>
+                <p>Si tenés un clásico con historia, un hot rod, un americano, un custom o un deportivo moderno, este es tu lugar. Completá el formulario para postular tu auto. Si es seleccionado, te enviaremos la acreditación por mail.</p>
+                
+                <form class="formulario-registro" name="inscripcion-vehiculo" method="POST" data-netlify="true" enctype="multipart/form-data">
+                    <input type="hidden" name="form-name" value="inscripcion-vehiculo" />
+
+                    <h3>Datos Personales</h3>
+                    <div class="campo-form">
+                        <label for="nombre">Nombre y Apellido</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="campo-form">
+                        <label for="celular">Teléfono Celular</label>
+                        <input type="tel" id="celular" name="celular" placeholder="Ej: 223 123 4567" required>
+                    </div>
+
+                    <h3>Datos del Vehículo</h3>
+                    <div class="campo-form">
+                        <label for="marca">Marca</label>
+                        <input type="text" id="marca" name="marca" placeholder="Ej: Ford" required>
+                    </div>
+                    <div class="campo-form">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" id="modelo" name="modelo" placeholder="Ej: Mustang" required>
+                    </div>
+                    <div class="campo-form">
+                        <label for="ano">Año</label>
+                        <input type="number" id="ano" name="ano" placeholder="Ej: 1969" required min="1900" max="2025">
+                    </div>
+                    <div class="campo-form">
+                         <label for="foto_vehiculo">Foto del Vehículo (obligatorio)</label>
+                         <input type="file" name="foto_vehiculo" id="foto_vehiculo" class="input-file" accept="image/png, image/jpeg" required>
+                         <label for="foto_vehiculo" class="btn-file">
+                             <span>Seleccionar Archivo</span>
+                         </label>
+                         <span class="file-name">Ningún archivo seleccionado</span>
+                    </div>
+                    <div class="campo-form">
+                         <label for="foto_seguro">Credencial del Seguro (obligatorio)</label>
+                         <input type="file" name="foto_seguro" id="foto_seguro" class="input-file" accept="image/png, image/jpeg, application/pdf" required>
+                         <label for="foto_seguro" class="btn-file">
+                             <span>Seleccionar Archivo</span>
+                         </label>
+                         <span class="file-name">Ningún archivo seleccionado</span>
+                    </div>
+                    <button type="submit" class="btn">Enviar Postulación</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Cars & Coffee Mar del Plata. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para mostrar el nombre de los archivos seleccionados
+        document.querySelectorAll('.input-file').forEach(input => {
+            input.addEventListener('change', function(e) {
+                const fileName = e.target.files[0] ? e.target.files[0].name : 'Ningún archivo seleccionado';
+                const fileNameSpan = this.nextElementSibling.nextElementSibling;
+                if (fileNameSpan) {
+                    fileNameSpan.textContent = fileName;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
